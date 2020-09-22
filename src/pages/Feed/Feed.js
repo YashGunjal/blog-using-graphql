@@ -179,7 +179,7 @@ class Feed extends Component {
     if (this.state.editPost) {
       formData.append('oldPath', this.state.editPost.imagePath);
     }
-    fetch('http://localhost:8080/post-image', {
+    fetch('https://message-node-backend.herokuapp.com/post-image', {
       method: 'PUT',
       headers: {
         Authorization: 'Bearer ' + this.props.token
