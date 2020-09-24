@@ -31,7 +31,7 @@ class Feed extends Component {
         }
       `
     };
-    fetch('https://message.loca.lt/graphql', {
+    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -88,7 +88,7 @@ class Feed extends Component {
         page: page
       }
     };
-    fetch('https://message.loca.lt/graphql', {
+    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -131,7 +131,7 @@ class Feed extends Component {
         userStatus: this.state.status
       }
     };
-    fetch('https://message.loca.lt/graphql', {
+    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -179,7 +179,7 @@ class Feed extends Component {
     if (this.state.editPost) {
       formData.append('oldPath', this.state.editPost.imagePath);
     }
-    fetch('https://message.loca.lt/post-image', {
+    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/post-image', {
       method: 'PUT',
       headers: {
         Authorization: 'Bearer ' + this.props.token
@@ -236,7 +236,7 @@ class Feed extends Component {
           };
         }
 
-        return fetch('https://message.loca.lt/graphql', {
+        return fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
           method: 'POST',
           body: JSON.stringify(graphqlQuery),
           headers: {
@@ -317,7 +317,7 @@ class Feed extends Component {
         }
       `
     };
-    fetch('https://message.loca.lt/graphql', {
+    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
