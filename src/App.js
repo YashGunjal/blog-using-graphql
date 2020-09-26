@@ -73,7 +73,7 @@ class App extends Component {
       }
     };
     this.setState({ authLoading: true });
-    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
+    fetch('http://localhost:8080/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -136,7 +136,7 @@ class App extends Component {
         password: authData.signupForm.password.value
       }
     };
-    fetch('http://ec2-15-207-89-76.ap-south-1.compute.amazonaws.com:8080/graphql', {
+    fetch('http://localhost:8080/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
